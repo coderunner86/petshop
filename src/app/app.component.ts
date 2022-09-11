@@ -14,6 +14,10 @@ export class AppComponent {
     age: '',
     raza: '',
     celular: '',
+    direccion: '',
+    observaciones: '',
+    servicio: '',
+    size: 0,
     email: '',
   };
   editUser: Users = {
@@ -23,6 +27,10 @@ export class AppComponent {
     age: '',
     raza: '',
     celular: '',
+    direccion: '',
+    observaciones: '',
+    servicio: '',
+    size: 0,
     email: '',
   };
   users: Users[] = [
@@ -33,6 +41,10 @@ export class AppComponent {
       age: '4 años',
       raza: 'Birmano',
       celular: '3124567869',
+      direccion: '',
+      observaciones: '',
+      servicio: '',
+      size: 0,
       email: 'user0@domain.com',
     },
     {
@@ -42,6 +54,10 @@ export class AppComponent {
       age: '7 meses',
       raza: 'Angora',
       celular: '3124567869',
+      direccion: '',
+      observaciones: '',
+      servicio: '',
+      size: 0,
       email: 'user1@domain.com',
     },
     {
@@ -51,6 +67,10 @@ export class AppComponent {
       age: '5 años',
       raza: 'Golden',
       celular: '3124523449',
+      direccion: '',
+      observaciones: '',
+      servicio: '',
+      size: 0,
       email: 'user2@domain.com',
     },
   ];
@@ -81,6 +101,10 @@ export class AppComponent {
       age: '',
       raza: '',
       celular: '',
+      direccion: '',
+      observaciones: '',
+      servicio: '',
+      size: 0,
       email: '',
     };
   }

@@ -5,5 +5,9 @@ export interface Users {
   age: string;
   raza: string;
   celular: string;
+  direccion: string;
+  observaciones: string;
+  servicio: string;
+  size: number;
   email: string;
 }

@@ -18,13 +18,13 @@
           <div class="collapse navbar-collapse" id="navbarID">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#"
-                >Registro</a
+                >Registro de clientes</a
               >
               <a class="nav-link active" aria-current="page" href="#"
-                >Historial</a
+                >Historial de Peluquería</a
               >
               <a class="nav-link active" aria-current="page" href="#"
-                >Egresos</a
+                >Historial de egreso</a
               >
             </div>
           </div>
@@ -313,7 +313,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">
-            Registrado: {{ myDate | date: 'dd-MM-yyyy' }}
+            Historial Registrado: {{ myDate | date: 'dd-MM-yyyy' }}
           </h5>
           <button
             type="button"
@@ -325,7 +325,7 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-6">
-              <strong>Id</strong>
+              <strong>Historial de belleza No.</strong>
             </div>
             <div class="col-6">
               {{ editUser.id }}
