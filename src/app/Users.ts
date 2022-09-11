@@ -1,6 +1,6 @@
 export interface Users {
   id: number;
   username: string;
-  password: string;
+  mascota: string;
   email: string;
 }

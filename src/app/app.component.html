@@ -2,7 +2,6 @@
   <div class="row">
     <nav class="navbar navbar-expand-sm navbar-dark crud">
       <div class="container-fluid">
-      
         <a class="navbar-brand" href="#">Roberta Pet Shop Web APP</a>
         <button
           class="navbar-toggler"
@@ -13,15 +12,20 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-        
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-flex">
           <div class="collapse navbar-collapse" id="navbarID">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Registro</a>
-              <a class="nav-link active" aria-current="page" href="#">Historial</a>
-              <a class="nav-link active" aria-current="page" href="#">Egresos</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Registro</a
+              >
+              <a class="nav-link active" aria-current="page" href="#"
+                >Historial</a
+              >
+              <a class="nav-link active" aria-current="page" href="#"
+                >Egresos</a
+              >
             </div>
           </div>
         </div>
@@ -132,12 +136,12 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="password">Password: </label>
+                  <label for="mascota">mascota: </label>
                   <input
                     class="form-control"
-                    type="password"
-                    name="password"
-                    [(ngModel)]="inputUser.password"
+                    type="mascota"
+                    name="mascota"
+                    [(ngModel)]="inputUser.mascota"
                   />
                 </div>
                 <div class="mb-3">
@@ -207,12 +211,12 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="password">Password: </label>
+                  <label for="mascota">Mascota: </label>
                   <input
                     class="form-control"
-                    type="password"
-                    name="password"
-                    [(ngModel)]="editUser.password"
+                    type="text"
+                    name="mascota"
+                    [(ngModel)]="editUser.mascota"
                   />
                 </div>
                 <div class="mb-3">
@@ -253,7 +257,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">
-            Details at {{ myDate | date: 'dd-MM-yyyy' }}
+            Registrado: {{ myDate | date: 'dd-MM-yyyy' }}
           </h5>
           <button
             type="button"
@@ -277,6 +281,14 @@
             </div>
             <div class="col-6">
               {{ editUser.username }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Mascota: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.mascota }}
             </div>
           </div>
           <div class="row mt-4">

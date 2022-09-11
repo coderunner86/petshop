@@ -10,32 +10,32 @@ export class AppComponent {
   inputUser: Users = {
     id: -1,
     username: '',
-    password: '',
+    mascota: '',
     email: '',
   };
   editUser: Users = {
     id: -1,
     username: '',
-    password: '',
+    mascota: '',
     email: '',
   };
   users: Users[] = [
     {
       id: 0,
       username: '1062674653',
-      password: '123',
+      mascota: '123',
       email: 'user0@domain.com',
     },
     {
       id: 1,
       username: '103957782',
-      password: '123',
+      mascota: '123',
       email: 'user1@domain.com',
     },
     {
       id: 2,
       username: '3459173928',
-      password: '123',
+      mascota: '123',
       email: 'user2@domain.com',
     },
   ];
@@ -62,7 +62,7 @@ export class AppComponent {
     this.inputUser = {
       id: -1,
       username: '',
-      password: '',
+      mascota: '',
       email: '',
     };
   }
