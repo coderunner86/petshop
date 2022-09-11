@@ -11,31 +11,36 @@ export class AppComponent {
     id: -1,
     username: '',
     mascota: '',
+    celular: '',
     email: '',
   };
   editUser: Users = {
     id: -1,
     username: '',
     mascota: '',
+    celular: '',
     email: '',
   };
   users: Users[] = [
     {
       id: 0,
       username: '1062674653',
-      mascota: '123',
+      mascota: 'Roberta',
+      celular: '3124567869',
       email: 'user0@domain.com',
     },
     {
       id: 1,
       username: '103957782',
-      mascota: '123',
+      mascota: 'Príncipe',
+      celular: '3124567869',
       email: 'user1@domain.com',
     },
     {
       id: 2,
       username: '3459173928',
-      mascota: '123',
+      mascota: 'Canela',
+      celular: '3124523449',
       email: 'user2@domain.com',
     },
   ];
@@ -63,6 +68,7 @@ export class AppComponent {
       id: -1,
       username: '',
       mascota: '',
+      celular: '',
       email: '',
     };
   }

@@ -145,6 +145,15 @@
                   />
                 </div>
                 <div class="mb-3">
+                  <label for="celular">Celular: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="celula"
+                    [(ngModel)]="inputUser.celular"
+                  />
+                </div>
+                <div class="mb-3">
                   <label for="email">Email: </label>
                   <input
                     class="form-control"
@@ -289,6 +298,14 @@
             </div>
             <div class="col-6">
               {{ editUser.mascota }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Celular: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.celular }}
             </div>
           </div>
           <div class="row mt-4">
