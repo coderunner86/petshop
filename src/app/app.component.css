@@ -1,0 +1,28 @@
+.crud,
+thead {
+  background: #895ddc;
+  color: white;
+}
+
+tbody {
+  background: #ffffc0;
+}
+
+.agregar {
+  background: #008e74;
+}
+
+.info {
+  background: #008fa2;
+  color: white;
+}
+
+.eliminar {
+  background: #ff6692;
+  color: white;
+}
+
+.editar {
+  background: #ffc85a;
+  color: white;
+}

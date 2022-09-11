@@ -1,0 +1,300 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-sm navbar-dark crud">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CRUD APP</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarID"
+          aria-controls="navbarID"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex">
+          <div class="collapse navbar-collapse" id="navbarID">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Users</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row mt-4">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by username"
+          (keyup)="filterUsers($event)"
+        />
+      </div>
+    </div>
+    <div class="col-sm-12 offset-md-5 col-md-3 offset-lg-5 col-lg-3">
+      <button
+        class="btn btn-success agregar"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        + Agregar
+      </button>
+    </div>
+  </div>
+  <div class="row mt-4 p-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Id</th>
+          <th>Username</th>
+          <th colspan="3" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let us of users; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ us.id }}</td>
+          <td>{{ us.username }}</td>
+          <td>
+            <button
+              class="btn info"
+              (click)="loadInfo(i)"
+              data-bs-toggle="modal"
+              data-bs-target="#details"
+            >
+              <i class="fa-solid fa-eye"></i>
+              Detalles
+            </button>
+          </td>
+          <td>
+            <button class="btn eliminar" (click)="eliminar(i)">
+              <i class="fa-solid fa-trash"></i>
+              Eliminar
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn editar"
+              (click)="loadInfo(i)"
+              data-bs-toggle="modal"
+              data-bs-target="#editar"
+            >
+              <i class="fa-solid fa-pencil"></i>
+              Editar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register Form</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <form>
+                <div class="mb-3">
+                  <label for="username">Username: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="username"
+                    [(ngModel)]="inputUser.username"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password">Password: </label>
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    [(ngModel)]="inputUser.password"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email: </label>
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    [(ngModel)]="inputUser.email"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="addUser()"
+            data-bs-dismiss="modal"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EDIT -->
+  <div
+    class="modal fade"
+    id="editar"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Form</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <form>
+                <div class="mb-3">
+                  <label for="username">Username: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="username"
+                    [(ngModel)]="editUser.username"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password">Password: </label>
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    [(ngModel)]="editUser.password"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email: </label>
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    [(ngModel)]="editUser.email"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DETAILS -->
+  <div
+    class="modal fade"
+    id="details"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Details at {{ myDate | date: 'dd-MM-yyyy' }}
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <strong>Id</strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.id }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Username</strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.username }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Email: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.email }}
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
