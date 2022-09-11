@@ -2,7 +2,8 @@
   <div class="row">
     <nav class="navbar navbar-expand-sm navbar-dark crud">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CRUD APP</a>
+      
+        <a class="navbar-brand" href="#">Roberta Pet Shop Web APP</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -12,13 +13,15 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
+        
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-flex">
           <div class="collapse navbar-collapse" id="navbarID">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link active" aria-current="page" href="#">Users</a>
+              <a class="nav-link active" aria-current="page" href="#">Registro</a>
+              <a class="nav-link active" aria-current="page" href="#">Historial</a>
+              <a class="nav-link active" aria-current="page" href="#">Egresos</a>
             </div>
           </div>
         </div>
@@ -34,7 +37,7 @@
         <input
           type="text"
           class="form-control"
-          placeholder="Search by username"
+          placeholder="Buscar por cedula"
           (keyup)="filterUsers($event)"
         />
       </div>
@@ -54,9 +57,9 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Id</th>
-          <th>Username</th>
-          <th colspan="3" class="text-center">Actions</th>
+          <th>id</th>
+          <th>Usuario</th>
+          <th colspan="3" class="text-center">Acciones</th>
         </tr>
       </thead>
       <tbody>

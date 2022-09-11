@@ -22,21 +22,21 @@ export class AppComponent {
   users: Users[] = [
     {
       id: 0,
-      username: 'dapacheco1',
+      username: '1062674653',
       password: '123',
-      email: 'dapacheco1@domain.com',
+      email: 'user0@domain.com',
     },
     {
       id: 1,
-      username: 'jperez',
+      username: '103957782',
       password: '123',
-      email: 'jperez@domain.com',
+      email: 'user1@domain.com',
     },
     {
       id: 2,
-      username: 'mviteri',
+      username: '3459173928',
       password: '123',
-      email: 'mviteri@domain.com',
+      email: 'user2@domain.com',
     },
   ];
 
