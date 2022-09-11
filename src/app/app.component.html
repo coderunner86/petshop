@@ -127,7 +127,7 @@
             <div class="d-flex justify-content-center">
               <form>
                 <div class="mb-3">
-                  <label for="username">Username: </label>
+                  <label for="username">Mi dueño: </label>
                   <input
                     class="form-control"
                     type="text"
@@ -136,7 +136,7 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="mascota">mascota: </label>
+                  <label for="mascota">Mi nombre: </label>
                   <input
                     class="form-control"
                     type="mascota"
@@ -145,11 +145,29 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="celular">Celular: </label>
+                  <label for="raza">Mi raza: </label>
                   <input
                     class="form-control"
                     type="text"
-                    name="celula"
+                    name="raza"
+                    [(ngModel)]="inputUser.raza"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="age">Mi edad: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="edad"
+                    [(ngModel)]="inputUser.age"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="celular">Contacto: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="celular"
                     [(ngModel)]="inputUser.celular"
                   />
                 </div>
@@ -211,7 +229,7 @@
             <div class="d-flex justify-content-center">
               <form>
                 <div class="mb-3">
-                  <label for="username">Username: </label>
+                  <label for="username">Mi dueño: </label>
                   <input
                     class="form-control"
                     type="text"
@@ -220,12 +238,30 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="mascota">Mascota: </label>
+                  <label for="mascota">Mi nombre: </label>
                   <input
                     class="form-control"
                     type="text"
                     name="mascota"
                     [(ngModel)]="editUser.mascota"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="raza">Mi raza: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="raza"
+                    [(ngModel)]="inputUser.raza"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="age">Mi edad: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="edad"
+                    [(ngModel)]="editUser.age"
                   />
                 </div>
                 <div class="mb-3">
@@ -295,7 +331,7 @@
           </div>
           <div class="row mt-4">
             <div class="col-6">
-              <strong>Username</strong>
+              <strong>Mi dueño</strong>
             </div>
             <div class="col-6">
               {{ editUser.username }}
@@ -303,10 +339,26 @@
           </div>
           <div class="row mt-4">
             <div class="col-6">
-              <strong>Mascota: </strong>
+              <strong>Mi nombre: </strong>
             </div>
             <div class="col-6">
               {{ editUser.mascota }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Mi raza: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.raza }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Mi edad: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.age }}
             </div>
           </div>
           <div class="row mt-4">
