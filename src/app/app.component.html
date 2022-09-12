@@ -174,6 +174,42 @@
                   />
                 </div>
                 <div class="mb-3">
+                  <label for="direccion">Dirección: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="direccion"
+                    [(ngModel)]="inputUser.direccion"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="observaciones">Observaciones: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="observaciones"
+                    [(ngModel)]="inputUser.observaciones"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="servicio">Servicio: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="servicio"
+                    [(ngModel)]="inputUser.servicio"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="size">Tamaño en cm: </label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="size"
+                    [(ngModel)]="inputUser.size"
+                  />
+                </div>
+                <div class="mb-3">
                   <label for="email">Email: </label>
                   <input
                     class="form-control"
@@ -254,7 +290,7 @@
                     class="form-control"
                     type="text"
                     name="raza"
-                    [(ngModel)]="inputUser.raza"
+                    [(ngModel)]="editUser.raza"
                   />
                 </div>
                 <div class="mb-3">
@@ -273,6 +309,42 @@
                     type="text"
                     name="celular"
                     [(ngModel)]="editUser.celular"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="direccion">Dirección: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="direccion"
+                    [(ngModel)]="editUser.direccion"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="observaciones">Observaciones: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="observaciones"
+                    [(ngModel)]="editUser.observaciones"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="servicio">Servicio: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="servicio"
+                    [(ngModel)]="editUser.servicio"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="size">Tamaño en cm: </label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="size"
+                    [(ngModel)]="editUser.size"
                   />
                 </div>
                 <div class="mb-3">
@@ -369,6 +441,38 @@
             </div>
             <div class="col-6">
               {{ editUser.celular }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Direccion: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.direccion }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Observaciones: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.observaciones }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Servicio: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.servicio }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong>Tamaño en cm: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.size }}
             </div>
           </div>
           <div class="row mt-4">
