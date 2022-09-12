@@ -10,4 +10,6 @@ export interface Users {
   servicio: string;
   size: number;
   email: string;
+  horaIngreso: string;
+  horaSalida: string;
 }

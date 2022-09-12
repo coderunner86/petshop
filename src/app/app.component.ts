@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { Users } from './Users';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -19,6 +20,8 @@ export class AppComponent {
     servicio: '',
     size: 0,
     email: '',
+    horaIngreso: '',
+    horaSalida: '',
   };
   editUser: Users = {
     id: -1,
@@ -32,6 +35,8 @@ export class AppComponent {
     servicio: '',
     size: 0,
     email: '',
+    horaIngreso: '',
+    horaSalida: '',
   };
   users: Users[] = [
     {
@@ -46,6 +51,8 @@ export class AppComponent {
       servicio: '',
       size: 0,
       email: 'user0@domain.com',
+      horaIngreso: '3 PM',
+      horaSalida: '5 PM',
     },
     {
       id: 1,
@@ -59,6 +66,8 @@ export class AppComponent {
       servicio: '',
       size: 0,
       email: 'user1@domain.com',
+      horaIngreso: '2 PM',
+      horaSalida: '4 PM',
     },
     {
       id: 2,
@@ -72,6 +81,8 @@ export class AppComponent {
       servicio: '',
       size: 0,
       email: 'user2@domain.com',
+      horaIngreso: '9 AM',
+      horaSalida: '12 PM',
     },
   ];
 
@@ -106,6 +117,8 @@ export class AppComponent {
       servicio: '',
       size: 0,
       email: '',
+      horaIngreso: '',
+      horaSalida: '',
     };
   }
 

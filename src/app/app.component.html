@@ -20,10 +20,20 @@
               <a class="nav-link active" aria-current="page" href="#"
                 >Registro de clientes</a
               >
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#info"
                 >Historial de Peluquería</a
               >
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#details"
                 >Historial de egreso</a
               >
             </div>
@@ -217,6 +227,15 @@
                     name="email"
                     [(ngModel)]="inputUser.email"
                   />
+                  <div class="mb-3">
+                    <label for="horaIngreso">Hora de Ingreso: </label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="size"
+                      [(ngModel)]="inputUser.horaIngreso"
+                    />
+                  </div>
                 </div>
               </form>
             </div>
@@ -336,6 +355,15 @@
                     type="text"
                     name="servicio"
                     [(ngModel)]="editUser.servicio"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="horaIngreso">Hora de Ingreso: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="ingreso"
+                    [(ngModel)]="editUser.horaIngreso"
                   />
                 </div>
                 <div class="mb-3">
@@ -469,6 +497,14 @@
           </div>
           <div class="row mt-4">
             <div class="col-6">
+              <strong>Hora de Ingreso: </strong>
+            </div>
+            <div class="col-6">
+              {{ editUser.horaIngreso }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
               <strong>Tamaño en cm: </strong>
             </div>
             <div class="col-6">
@@ -492,6 +528,93 @@
           >
             Cerrar
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MODAL INFO-->
+  <div
+    class="modal fade"
+    id="info"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Historial de Peluquería:
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <strong>{{ myDate | date: 'dd-MM-yyyy' }}</strong>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong
+                ><div class="row mt-4 p-4">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>id</th>
+                        <th>Usuario</th>
+                        <th>Hora de Ingreso</th>
+                        <th>Servicio</th>
+                        <th>Especificaciones</th>
+                        <th>Firma de Ingreso</th>
+                        <th colspan="3" class="text-center">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let us of users; index as i">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ us.id }}</td>
+                        <td>{{ us.username }}</td>
+                        <td>{{ us.horaIngreso }}</td>
+                        <td>{{ us.servicio }}</td>
+                        <td>{{ us.observaciones }}</td>
+                        <td>Espacio para firma</td>
+                        <td></td>
+                        <td>
+                          <button class="btn descargar" (click)="(i)">
+                            <i class="fa-solid fa-download"></i>
+                            Descargar
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div></strong
+              >
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-6">
+                <strong>Esta es una demo sujeta a modificaciones </strong>
+              </div>
+              <div class="col-6"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
         </div>
       </div>
     </div>
