@@ -33,7 +33,7 @@
                 aria-current="page"
                 href="#"
                 data-bs-toggle="modal"
-                data-bs-target="#details"
+                data-bs-target="#info-egresos"
                 >Historial de egreso</a
               >
             </div>
@@ -584,6 +584,101 @@
                         <td>{{ us.horaIngreso }}</td>
                         <td>{{ us.servicio }}</td>
                         <td>{{ us.observaciones }}</td>
+                        <td>Espacio para firma</td>
+                        <td></td>
+                        <td>
+                          <button class="btn descargar" (click)="(i)">
+                            <i class="fa-solid fa-download"></i>
+                            Descargar
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div></strong
+              >
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-6">
+                <strong>Esta es una demo sujeta a modificaciones </strong>
+              </div>
+              <div class="col-6"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MODAL INFO EGRESOS-->
+  <div
+    class="modal fade"
+    id="info-egresos"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Historial de Egresos:
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <strong>{{ myDate | date: 'dd-MM-yyyy' }}</strong>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <strong
+                ><div class="row mt-4 p-4">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>id</th>
+                        <th>Mi Nombre</th>
+                        <th>Mi Dueño</th>
+                        <th>Hora de salida</th>
+                        <th>Bikini</th>
+                        <th>Uñas</th>
+                        <th>Ojos</th>
+                        <th>Oidos</th>
+                        <th>Corte</th>
+                        <th>Firma Cliente</th>
+                        <th>Firma de quien entrega</th>
+                        <th colspan="3" class="text-center">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let us of users; index as i">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ us.id }}</td>
+                        <td>{{ us.mascota }}</td>
+                        <td>{{ us.username }}</td>
+                        <td>{{ us.horaSalida }}</td>
+                        <td>{{ us.bikini }}</td>
+                        <td>{{ us.nails }}</td>
+                        <td>{{ us.ojos }}</td>
+                        <td>{{ us.oidos }}</td>
                         <td>Espacio para firma</td>
                         <td></td>
                         <td>

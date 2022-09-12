@@ -12,4 +12,9 @@ export interface Users {
   email: string;
   horaIngreso: string;
   horaSalida: string;
+  bikini: string;
+  nails: string;
+  ojos: string;
+  oidos: string;
+  corte: string;
 }

@@ -22,6 +22,11 @@ export class AppComponent {
     email: '',
     horaIngreso: '',
     horaSalida: '',
+    bikini: '',
+    nails: '',
+    ojos: '',
+    oidos: '',
+    corte: '',
   };
   editUser: Users = {
     id: -1,
@@ -37,6 +42,11 @@ export class AppComponent {
     email: '',
     horaIngreso: '',
     horaSalida: '',
+    bikini: '',
+    nails: '',
+    ojos: '',
+    oidos: '',
+    corte: '',
   };
   users: Users[] = [
     {
@@ -53,6 +63,11 @@ export class AppComponent {
       email: 'user0@domain.com',
       horaIngreso: '3 PM',
       horaSalida: '5 PM',
+      bikini: '',
+      nails: '',
+      ojos: '',
+      oidos: '',
+      corte: '',
     },
     {
       id: 1,
@@ -68,6 +83,11 @@ export class AppComponent {
       email: 'user1@domain.com',
       horaIngreso: '2 PM',
       horaSalida: '4 PM',
+      bikini: '',
+      nails: '',
+      ojos: '',
+      oidos: '',
+      corte: '',
     },
     {
       id: 2,
@@ -83,6 +103,11 @@ export class AppComponent {
       email: 'user2@domain.com',
       horaIngreso: '9 AM',
       horaSalida: '12 PM',
+      bikini: '',
+      nails: '',
+      ojos: '',
+      oidos: '',
+      corte: '',
     },
   ];
 
@@ -119,6 +144,11 @@ export class AppComponent {
       email: '',
       horaIngreso: '',
       horaSalida: '',
+      bikini: '',
+      nails: '',
+      ojos: '',
+      oidos: '',
+      corte: '',
     };
   }
 
