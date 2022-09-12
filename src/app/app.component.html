@@ -367,6 +367,15 @@
                   />
                 </div>
                 <div class="mb-3">
+                  <label for="horaIngreso">Hora de Salida: </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="ingreso"
+                    [(ngModel)]="editUser.horaIngreso"
+                  />
+                </div>
+                <div class="mb-3">
                   <label for="size">Tamaño en cm: </label>
                   <input
                     class="form-control"
@@ -679,8 +688,9 @@
                         <td>{{ us.nails }}</td>
                         <td>{{ us.ojos }}</td>
                         <td>{{ us.oidos }}</td>
+                        <td>{{ us.corte }}</td>
                         <td>Espacio para firma</td>
-                        <td></td>
+                        <td>Espacio para firma</td>
                         <td>
                           <button class="btn descargar" (click)="(i)">
                             <i class="fa-solid fa-download"></i>
